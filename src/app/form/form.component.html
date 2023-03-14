@@ -1,0 +1,36 @@
+
+<div id="MainDiv">
+<form #studentForm="ngForm" (ngSubmit)="onSubmit()" novalidatae>
+    <h1>Student Details</h1>
+    <hr/>
+    
+    <div class="form-group">
+
+        <label id="firstName">First Name</label><br>
+        <input matInput [(ngModel)]="std.firstName"  required #firstName="ngModel"  [ngClass]="{'IsNotValid':firstName.invalid}" name="firstName" id="firstName" type="text" class="form-control"/>
+       
+       <br> <small *ngIf="firstName.invalid">First Name is Required </small>
+    </div>
+    <div class="form-group">
+        <label id="secondName">Second Name</label><br>
+        <input [(ngModel)]="std.secondName" name="secondName" id="secondName" type="text" class="form-control"/>
+        
+    </div>
+    <div class="form-group">
+        <label id="emilId">Email Id</label><br>
+        <input [(ngModel)]="std.emailId" required #emailId="ngModel" [ngClass]="{'IsNotValid':emailId.invalid}" name="emilId" id="emailId" type="email" class="form-control "/>
+        <br> <small *ngIf="emailId.invalid">First Name is Required </small>
+    </div>
+    <div class="form-group">
+        <label id="fatherName">Father Name</label><br>
+        <input [(ngModel)]="std.fatherName" name="fatherName" id="fathertName" type="text" class="form-control"/>
+        
+    </div>
+    <br>
+    <br>
+    <button [disabled]="studentForm.form.invalid" type="submit">Submit </button>
+    <hr/>
+    {{test}}
+    
+</form>
+</div>

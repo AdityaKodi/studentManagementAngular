@@ -1,0 +1,11 @@
+form{
+    width: 100%;
+    outline: 10px;
+    text-align: center;
+    
+}
+mat-form-field
+{
+    width:50%;
+    align-items: center;
+}

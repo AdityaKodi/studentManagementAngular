@@ -1,0 +1,47 @@
+/*table{
+    width: 100%;
+    
+    color: red;
+    background-color:bisque;
+
+}
+th{
+    background-color: black;
+    color: red;
+}
+div{
+    
+
+    
+
+    color: rgb(204, 160, 79);
+    
+}
+#tr1
+{
+    background-color: black;
+}
+tr{
+    border: 3px;
+}
+a
+{
+    color: blue;
+}
+#delete
+{
+    background-color: red;
+    color: white;
+
+}*/
+#tr1
+{
+    text-align: center;
+    font-size: xx-large;
+    color: aqua;
+    background-color: aquamarine;
+}
+#Regid
+{
+ color: blue;
+}

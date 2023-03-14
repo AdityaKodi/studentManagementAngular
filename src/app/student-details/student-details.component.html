@@ -1,0 +1,18 @@
+
+<div id="stuDetails">
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>
+                Student Details
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content>Name :-{{student.firstName}}</mat-card-content><br>
+    
+        <mat-card-content>Register Id:{{student.regId}}</mat-card-content><br>
+        <mat-card-content>Email Addess:{{student.emailId}}</mat-card-content><br>
+        <mat-card-content>Father Name:{{student.fatherName}}</mat-card-content><br>
+    </mat-card>
+</div>
+<div id="button"><button mat-raised-button color="primary" printSectionId="stuDetails" ngxPrint> Print</button>
+    <button  mat-raised-button color="warn" (click)="GoBack()"><span>Go Back</span></button>
+</div>

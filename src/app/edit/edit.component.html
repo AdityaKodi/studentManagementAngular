@@ -1,0 +1,52 @@
+<form [formGroup]="studentForm" (ngSubmit)="submit()">
+    <h1>Student Details</h1>
+    <mat-form-field >
+        <mat-label>First Name</mat-label>
+        <input matInput type="text" placeholder="First Name" formControlName="firstName">
+         
+    </mat-form-field>
+    <div>
+        <small class="text-danger" *ngIf="studentForm.get('firstName')?.errors?.['required'] &&studentForm.get('firstName')?.touched">
+            This Field if required
+        </small>
+     </div>
+        <br><br>
+        <mat-form-field>
+            <mat-label>Second Name</mat-label>
+            <input matInput type="text" placeholder="Seconds Name" formControlName="secondName">
+   
+    </mat-form-field>
+     <br><br>
+
+    <mat-form-field>
+        <mat-label>Emai Id</mat-label>
+        <input  matInput type="email" placeholder="Example@email.com" formControlName="emailId">
+        
+    </mat-form-field>
+    <div *ngIf="(studentForm.get('emailId')?.invalid && studentForm.get('emailId')?.touched||studentForm.get('emailId')?.dirty)">
+
+        <small class="text-danger" *ngIf="studentForm.get('emailId')?.errors?.['required']">
+            This field Is Required
+
+        </small>
+        <small class="text-danger" *ngIf="studentForm.get('emailId')?.errors?.['email']">
+            Please Enter a valid Email Id
+
+        </small>
+
+    </div>
+     <br><br>
+     <mat-form-field>
+        <mat-label>Fathewer Name</mat-label>
+        <input matInput type="text" placeholder="Father Name" formControlName="fatherName">
+     </mat-form-field>
+    
+    <br><br>
+    <button mat-raised-button color="primary" type="submit">submit</button>
+    <br>
+    <br>
+    <button (click)="GoBack()"><span>Go Back</span></button>
+    
+    
+    
+</form>
